@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eScoolab</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+  
+    <!-- Modal -->
+    <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Guide line</h5>
+            </div>
+            <div class="modal-body">
+            <p><label>"Open Menu"</label> to open the menu bar </p>
+            <p><label>"Close Menu"</label> to close the menu bar </p>
+            <p><label>"Scroll Down"</label> to scroll the page </p>
+
+            <p><label>"Stutdown"</label> to close the voice command function </p>
+            <p><label>"Reload"</label> to Reload the page </p>
+
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="right"></div>
+        <div class="left"></div>
+
+
+        <!-- Navigation  -->
+
+        <nav class="nav">
+            <div onclick="navAnimation()" id="menuBtn">
+                <div class="menu_toggle">
+                    <span class="toggle_line1"></span>
+                    <span class="toggle_line2"></span>
+                </div>
+                <div class="text_animation">
+                    <h5 class="text1">Menu</h5>
+                    <h5 class="text2">Menu</h5>
+                </div>
+            </div>
+            
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="voiceBtn">
+                <i class="fas fa-microphone-alt"></i>
+            </div>
+            <!-- <div class="nav_contact">
+                <a href="#contact" class="text_animation">
+                    <h5 class="text1">Contact</h5>
+                    <h5 class="text2">Contact</h5>
+                </a>
+                <i class="fas fa-mobile-alt"></i>                
+            </div> -->
+        </nav>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="practicals.html">Practicals</a></li>
+                <li><a href="glosary.html">Glossary</a></li>
+                <li><a href="labtools.html">Lab Tools</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <!-- <li><a href="htmlpages/about.html">About</a></li> -->
+            </ul>
+        </div>
+        <div class="media">
+            <figure id="face"><i class="fab fa-facebook-f"></i></figure>
+            <figure id="link"><i class="fab fa-linkedin-in"></i></figure>
+            <figure id="inst">
+                <img src="assets/img/instagram.png">
+                <i class="fab fa-instagram"></i>
+            </figure>
+            <ul class="SocialLinks">
+                <li><a class="face" data-color="#3b5998" href="https://www.facebook.com/zeeshan.zeegota" target="_blank">Facebook</a></li>
+                <li><a class="inst" data-color="#fff" href="https://www.instagram.com/zeeshan.zeegota/" target="_blank">Instagram</a></li>
+                <li><a class="link" data-color="#0a66c2" href="https://www.linkedin.com/in/muhammad-zeeshan-023542205/" target="_blank">Linkedin</a></li>
+            </ul>
+        </div>
+        <section class="featured" id="featured">
+            <h1 class="heading"><span>featured</span> cars </h1>
+    
+            <div class="swiper featured-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <img src="assets/img/car-1.png" alt="">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="pricee">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="assets/img/car-2.png" alt="">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="pricee">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="assets/img/car-3.png" alt="">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="pricee">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="assets/img/car-4.png" alt="">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="pricee">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper featured-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <img src="assets/img/car-5.png" alt="">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="pricee">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="assets/img/car-6.png" alt="">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="pricee">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="assets/img/car-7.png" alt="">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="pricee">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="assets/img/car-8.png" alt="">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="pricee">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+
+<script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/annyang.min.js"></script>
+<script src="assets/js/TweenMax.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</html>
