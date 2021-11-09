@@ -432,6 +432,62 @@ figure i{
     animation: slide3 18s linear infinite;
   }
 
+.footer{
+    background: black;
+    padding: 2rem 9%;
+    color: white;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3{
+    color: #002b7c;
+    font-size: 2.2rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    display: block;
+    padding: 1rem 0;
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color: #002b7c;
+    transition: 0.5s;
+
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
