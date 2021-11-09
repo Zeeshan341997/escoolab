@@ -54,6 +54,7 @@ if (annyang) {
         },
         'reload': function(){
             window.open('../','_self');
+            
         },
         'scroll down':function(){
             document.body.scrollTop = 1000;
@@ -246,26 +247,6 @@ TweenMax.from('.header_banner', 2 ,{
 // })
 
 
-// var $slider = $('.slider');
-//     var $progressBar = $('.progress');
-//     $progressBar.css('background-size','30% 100%')
-//     $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-//       var calc = ( (nextSlide) / (slick.slideCount+-1) ) * 100;
-//       $progressBar
-//         .css('background-size', calc + '% 100%')
-//     });
-    
-//     $slider.slick({
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//       speed: 400,
-//       infinite: false,
-//         autoplay: true,
-//         autoplaySpeed: 3000,
-//         fade: true,
-//     });
-
-
 // Guide Line Popup Draggable
 
 $(".modal-header").on('mousedown', function(downEvt){
@@ -287,32 +268,35 @@ $(".modal-header").on('mousedown', function(downEvt){
     })
 })
 
-var swiper = new Swiper('.featured-slider', {
-    // Optional parameters
-    spaceBetween:20,
-    loop: true,
+
+
+// var swiper = new Swiper('.featured-slider', {
+//     // Optional parameters
+//     spaceBetween:20,
+//     loop: true,
   
-    slidesPerView:1,
-    autoplay:{
-        delay:6500,
-        disableOnInteraction:false,
-    },
-    grabCursor:true,
-    centeredSlides:true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable:true,
-    },
-    breakpoints:{
-        0:{
-            slidesPerView: 1,
-        },
-        768:{
-            slidesPerView: 2,
-        },
-        991:{
-            slidesPerView: 3,
-        },
-    }
+//     slidesPerView:1,
+//     autoplay:{
+//         delay:6500,
+//         disableOnInteraction:false,
+//     },
+//     grabCursor:true,
+//     centeredSlides:true,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable:true,
+//     },
+//     breakpoints:{
+//         0:{
+//             slidesPerView: 1,
+//         },
+//         768:{
+//             slidesPerView: 2,
+//         },
+//         991:{
+//             slidesPerView: 3,
+//         },
+//     }
   
-  });
+//   });
+

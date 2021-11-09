@@ -283,42 +283,6 @@ figure i{
     user-select: none;
     pointer-events: none;
 }
-/* .nav_contact{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.nav_contact::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: inline-block;
-    width: 0%;
-    height: 4px;
-    background-color: #2672ff;
-    margin: 0;
-    transition: 0.5s;
-    border-radius: 5px;
-}
-.nav_contact:hover:after{
-    width: 100%;
-}
-.nav_contact a{
-    text-decoration: none;
-}
-.nav_contact a h5{
-    color: black;
-    font-weight: 700;
-    font-size: 18px;
-    margin-right: 10px;
-    text-transform: uppercase;
-    transition:  transform 0.5s;
-}
-.nav_contact i{
-    font-size: 20px;
-} */
 
 /* width */
 ::-webkit-scrollbar {
@@ -436,6 +400,7 @@ figure i{
     background: black;
     padding: 2rem 9%;
     color: white;
+    overflow: hidden;
 }
 
 .footer .box-container{
@@ -639,13 +604,45 @@ figure i{
 
 
 @media(max-width:1200px){
-    
+    .content .header_banner{
+        width: 850px;
+    }
+    .header_banner iframe{
+        height: 418px;
+    }
 }
 @media(max-width:990px){
-    
+    .content .header_banner{
+        width: 750px;
+    }
+    .header_banner iframe{
+        height: 365px;
+        top: 41px;
+    }
+}
+@media(max-width:824px){
+    .content .header_banner{
+        width: 550px;
+    }
+    .header_banner iframe{
+        height: 260px;
+        top: 34px;
+    }
 }
 @media(max-width:768px){
     
+}
+@media(max-width:530px){
+    .header_banner iframe{
+        height: 250px;
+        top: 32px;
+    }
+}
+@media(max-width:500px){
+    .header_banner iframe{
+        height: 240px;
+        top: 28px;
+    }
 }
 @media(max-width:425px){
     #menuBtn h5{
@@ -655,12 +652,6 @@ figure i{
         height: 34px;
     }
 
-    .nav_contact a h5{
-        font-size: 16px;
-    }
-    .nav_contact i{
-        font-size: 18px;
-    }
     .logo a{
         width: 130px;
     }
@@ -677,6 +668,9 @@ figure i{
     
     .menu ul li a::after{
         height: 4px;
+    }
+    .header_banner iframe{
+        display: none;
     }
 }
 @media(max-width:325px){
