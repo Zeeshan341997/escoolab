@@ -440,7 +440,7 @@ figure i{
     font-weight: 700;
     display: block;
 }
-.labtool_section,.contact_section{
+.labtool_section,.contact_section,.glosary_section{
     position: relative;
     padding: 60px 0;
     background-color: #d8d8d8;
@@ -596,6 +596,14 @@ section#contact form#contactForm .form-group-textarea textarea {
     color: white;
 }
 
+/* Glosary Page */
+
+.glosary_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
 
 
 /* Footer Start */
