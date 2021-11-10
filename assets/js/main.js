@@ -253,6 +253,17 @@ TweenMax.from('.header_banner', 2 ,{
     opacity:0,
     ease: Power3.easeInOut
 })
+TweenMax.from('.labtoolsBanner h1', 2 ,{
+    delay: 2.4,
+    left: '600px',
+    opacity:0,
+    ease: Power3.easeInOut
+})
+TweenMax.from('.labtoolsBanner img', 2 ,{
+    delay: 2.4,
+    opacity:0,
+    ease: Power3.easeInOut
+})
 // TweenMax.from('.content-page .text', 2,{
 //     delay: 2.2,
 //     top: '-65%',
