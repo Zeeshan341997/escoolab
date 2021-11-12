@@ -506,7 +506,7 @@ figure i{
     font-weight: 700;
     display: block;
 }
-.labtool_section,.contact_section,.glosary_section{
+.labtool_section,.contact_section,.glosary_section,.practical_section{
     position: relative;
     padding: 60px 0;
     background-color: #d8d8d8;
