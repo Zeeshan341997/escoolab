@@ -110,8 +110,8 @@ if (annyang) {
             message.value = variable;
         },
         'submit':function(){
-            var submitBtn = document.querySelector(".btn-contact");
-            submitBtn.classList.add("d-none");
+            var submitBtn = document.querySelector("#submitButton");
+            submitBtn.click();
         }
 
     }
@@ -369,7 +369,7 @@ gsap.timeline({
         trigger:".wrapper",
         start:"0px 0%",
         scrub:1,
-        markers:true,
+        markers:false,
         pin:true
     }
 })
