@@ -47,31 +47,33 @@ if (annyang) {
         'contact us page': function(){
             window.open('contact_us.html','_self');
         },
-        'glosary page': function(){
+        'glossary page': function(){
             window.open('glosary.html','_self');
         },
-        'labtool page': function(){
+        'lab equipments page': function(){
             window.open('labtools.html','_self');
         },
         'practical page': function(){
             window.open('practicals.html','_self');
-            window.onload = annyang.start();
         },
         'reload': function(){
             window.open('../','_self');
             
         },
         'scroll down':function(){
-            document.body.scrollTop = 1000;
-            document.documentElement.scrollTop = 1000;
-            if(document.body.scrollTop == 1000 || document.documentElement.scrollTop == 1000){
-                document.body.scrollTop = 2000;
-                document.documentElement.scrollTop = 2000;
-            }   
+            document.body.scrollTop = 800;
+            document.documentElement.scrollTop = 800;
+            if(document.body.scrollTop == 800 || document.documentElement.scrollTop == 800){
+                document.body.scrollTop = 1600;
+                document.documentElement.scrollTop = 1600;
+            }else if(document.body.scrollTop == 1600 || document.documentElement.scrollTop == 1600){
+                document.body.scrollTop = 2400;
+                document.documentElement.scrollTop = 2400;
+            }
         },
         'scroll up':function(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 800;
+            document.documentElement.scrollTop = 800;
             if(document.body.scrollTop >= 500 || document.documentElement.scrollTop >= 500){
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
@@ -90,7 +92,26 @@ if (annyang) {
 
             modalOpen.style.display = "none";
             modalOpen.classList.remove('show');
-
+        },
+        'write name *tag': function(variable){
+            let name = document.getElementById("name");
+            name.value = variable;
+        },
+        'write email *tag': function(variable){
+            let email = document.getElementById("email");
+            email.value = variable;
+        },
+        'write number *tag': function(variable){
+            let phone = document.getElementById("phone");
+            phone.value = variable;
+        },
+        'write message *tag': function(variable){
+            let message = document.getElementById("message");
+            message.value = variable;
+        },
+        'submit':function(){
+            var submitBtn = document.querySelector(".btn-contact");
+            submitBtn.classList.add("d-none");
         }
 
     }
@@ -101,17 +122,6 @@ annyang.addCommands(formCommand);
     
 // Start listening. You can call this here, or attach this call to an event, button, etc.
     
-    // annyang.start();
-    // function voiceConvert(){
-    //     var voiceBtn = document.querySelector(".darkModeBtn");
-    //     voiceBtn.classList.add("on");
-    
-    //     if(voiceBtn.classList = "on"){
-    //         annyang.start();
-    //     }else{
-    //         annyang.abort();
-    //     }
-    // }
 
     $('.nav .voiceBtn').click(
         function(){
@@ -151,13 +161,13 @@ annyang.addCommands(formCommand);
     );
 }
 
-if(annyang.start()){
+if(window == annyang.start()){
     var modalOpen = document.querySelector('.modal');
 
     modalOpen.style.display = "block";
     modalOpen.classList.add('show');
     modalOpen.classList.add('.fade');
-}else if(annyang.abort()){
+}else if(window == annyang.abort()){
     modalOpen.style.display = "none";
     modalOpen.classList.remove('show');
     modalOpen.classList.remove('.fade');
@@ -222,6 +232,36 @@ $('.media ul .inst').hover(
         $('#inst').css("top","20%");
     }
 );
+$('.page_headings ul .l1 a').hover(
+    function(){
+        $('iframe.l1l').css("opacity","1");
+        $('iframe.l1l').css("top","47");
+        $('iframe.l1l').css("height","560");
+    },
+    function(){
+        $('iframe.l1l').css("opacity","0");
+    }
+);
+$('.page_headings ul .l2 a').hover(
+    function(){
+        $('iframe.l2l').css("opacity","1");
+        $('iframe.l2l').css("top","47");
+        $('iframe.l2l').css("height","560");
+    },
+    function(){
+        $('iframe.l2l').css("opacity","0");
+    }
+);
+$('.page_headings ul .l3 a').hover(
+    function(){
+        $('iframe.l3l').css("opacity","1");
+        $('iframe.l3l').css("top","47");
+        $('iframe.l3l').css("height","560");
+    },
+    function(){
+        $('iframe.l3l').css("opacity","0");
+    }
+);
 
 
 TweenMax.from('.right', 2,{
@@ -253,6 +293,12 @@ TweenMax.from('.header_banner', 2 ,{
     opacity:0,
     ease: Power3.easeInOut
 })
+TweenMax.from('.banner_heading', 2 ,{
+    delay: 3,
+    opacity:0,
+    // left: '-550px',
+    ease: Power3.easeInOut
+})
 TweenMax.from('.labtoolsBanner h1', 2 ,{
     delay: 2.4,
     left: '600px',
@@ -264,6 +310,7 @@ TweenMax.from('.labtoolsBanner img', 2 ,{
     opacity:0,
     ease: Power3.easeInOut
 })
+
 // TweenMax.from('.content-page .text', 2,{
 //     delay: 2.2,
 //     top: '-65%',
@@ -278,7 +325,7 @@ TweenMax.from('.labtoolsBanner img', 2 ,{
 
 // Guide Line Popup Draggable
 
-$(".modal-header").on('mousedown', function(downEvt){
+$(".modal-header,.modal-body").on('mousedown', function(downEvt){
     var $draggable = $(this)
     var x = downEvt.pageX - $draggable.offset().left,
         y = downEvt.pageY - $draggable.offset().top;
@@ -309,41 +356,59 @@ document.querySelector('.wrapper').onmousemove = (e) =>{
     });
 }
 
-document.querySelector('.wrapper').onmouseleave = () =>{
+document.querySelector('.wrapper').onmouseleave = (e) =>{
     document.querySelectorAll('.home-parallax').forEach(elm => {
 
-        elm.style.transform = `translateX(0px) translateY(0 px)`;
+        elm.style.transform = `translateX(0px) translateY(0px)`;
     });
 }
 
 
-// var swiper = new Swiper('.featured-slider', {
-//     // Optional parameters
-//     spaceBetween:20,
-//     loop: true,
-  
-//     slidesPerView:1,
-//     autoplay:{
-//         delay:6500,
-//         disableOnInteraction:false,
-//     },
-//     grabCursor:true,
-//     centeredSlides:true,
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable:true,
-//     },
-//     breakpoints:{
-//         0:{
-//             slidesPerView: 1,
-//         },
-//         768:{
-//             slidesPerView: 2,
-//         },
-//         991:{
-//             slidesPerView: 3,
-//         },
-//     }
-  
-//   });
-
+gsap.timeline({
+    scrollTrigger:{
+        trigger:".wrapper",
+        start:"0px 0%",
+        scrub:1,
+        markers:true,
+        pin:true
+    }
+})
+.to(".header_banner",{
+    x:-400,
+})
+.to(".banner_heading",{
+    top: '-400px',
+    left: '-550px',
+    transform: 'rotate(-90deg)',
+})
+.to(".banner_heading",{
+    y:-800
+})
+.to(".header_banner",{
+    width:1100,
+    y:-100,
+    x:-70
+})
+// .to("iframe.laptop_screen",{
+//     height:"560px",
+//     top:"47px"
+// })
+.to("iframe.laptop_screen",{
+    opacity:0
+})
+.from(".page_headings",{
+    opacity:0,
+    x:-700,
+})
+.from(".page_headings .l1",{
+    opacity:0,
+    x:10,
+})
+.from(".page_headings .l2",{
+    opacity:0,
+    x:10,
+})
+.from(".page_headings .l3",{
+    opacity:0,
+    x:10,
+})

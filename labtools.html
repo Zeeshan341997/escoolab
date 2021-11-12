@@ -19,19 +19,29 @@
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Guide line</h5>
+            <h5 class="voiceModalTitle" id="exampleModalCenterTitle">Guide line</h5>
             </div>
             <div class="modal-body">
             <p><label>"Open Menu"</label> to open the menu bar </p>
             <p><label>"Close Menu"</label> to close the menu bar </p>
-            <p><label>"Scroll Down"</label> to scroll the page </p>
+            <p><label>"Scroll Down"</label> to scroll down the page </p>
+            <p><label>"Scroll Up"</label> to scroll up the page </p>
+            <p><label>"Home Page"</label> to get Home page </p>
+            <p><label>"Practical Page"</label> to get Practical page </p>
+            <p><label>"Glosary page"</label> to get Glosary page </p>
+            <p><label>"Lab Equipments page"</label> to get Lab Tools page </p>
+            <p><label>"Contact Us page"</label> to get contact us page </p>
+
 
             <p><label>"Stutdown"</label> to close the voice command function </p>
             <p><label>"Reload"</label> to Reload the page </p>
+            <p><label>"Voice Commands"</label> to open voice commands list </p>
+            <p><label>"Close Voice Commands"</label> to close voice commands list </p>
+
 
             </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-contact" data-dismiss="modal">Close</button>
             </div>
         </div>
         </div>
@@ -61,16 +71,9 @@
                     <img src="assets/img/logo.png" alt="">
                 </a>
             </div>
-            <div class="voiceBtn">
+            <div class="voiceBtn" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
                 <i class="fas fa-microphone-alt"></i>
             </div>
-            <!-- <div class="nav_contact">
-                <a href="#contact" class="text_animation">
-                    <h5 class="text1">Contact</h5>
-                    <h5 class="text2">Contact</h5>
-                </a>
-                <i class="fas fa-mobile-alt"></i>                
-            </div> -->
         </nav>
         <div class="menu">
             <ul>
@@ -426,9 +429,25 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/annyang.min.js"></script>
 <script src="assets/js/TweenMax.min.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- <script src="assets/js/slick.min.js"></script> -->
+<!-- <script src="assets/js/swiper-bundle.min.js"> -->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+    window.onload = annyang.start();
+    if(window.onload == annyang.start()){
+        var voiceBtn = document.querySelector('.voiceBtn');
+        var voiceBtni = document.querySelector('.voiceBtn i');
+        voiceBtn.style.backgroundColor = 'white';
+        voiceBtni.style.color = '#2672ff';
+        voiceBtni.style.textShadow = "0px 0px 9px #2672ff";
+    }
+    else{
+        var voiceBtn = document.querySelector('.voiceBtn');
+        var voiceBtni = document.querySelector('.voiceBtn i');
+        voiceBtn.style.backgroundColor = 'black';
+        voiceBtni.style.color = 'white';
+    }
+</script>
 
 </html>

@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'Raiderfont';
+  src: local('Raiderfont'), url('../font/Raiderfont.ttf') format('truetype');
+}
+
 
 *{
     padding: 0;
@@ -59,6 +64,24 @@ body{
 
 .modal-header{
     justify-content: center !important;
+}
+.modal-content{
+    padding:5rem;
+    text-align: start;
+    background: rgba(255, 255, 255, 0.452);
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
+.modal-content label{
+  color: #002b7c;
+}
+.voiceModalTitle{
+  color: #002b7c;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 #menuBtn{
@@ -337,6 +360,32 @@ figure i{
     padding: 150px 0 100px 0;
     margin-left: -20%;
 }
+.content{
+  position: relative;
+}
+.banner_heading{
+  position: absolute;
+  text-align: start;
+  width: 100%;
+  top: 180px;
+  left: 50px;
+}
+
+.banner_heading h1{
+  position: relative;
+  font-size: 90px;
+  font-weight: 700;
+  color: black;
+}
+
+.banner_heading h2{
+  position: relative;
+  font-size: 50px;
+  font-family: 'Raiderfont';
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke:2px black;
+}
 
 .content .header_banner{
     position: relative;
@@ -344,6 +393,7 @@ figure i{
     align-items: center;
     justify-content: center;
     width: 950px;
+    left:700px;
   }
 
 .content .header_banner img{
@@ -369,7 +419,6 @@ figure i{
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 
@@ -417,6 +466,23 @@ figure i{
   .banner3{ 
     animation: slide3 18s linear infinite;
   }
+.page_headings{
+  position: absolute;
+  text-align: start;
+  width: 100%;
+  top: 180px;
+  left: 50px;
+}
+.page_headings ul li{
+  list-style: none;
+}
+.page_headings ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.5;
+}
 /* Home Page Body Content End */
 
 /* Labtools Page */
@@ -673,7 +739,6 @@ section#contact form#contactForm .form-group-textarea textarea {
 
 
 
-
 /*****Dark Mode + Voice Btn******/
 
 .voiceBtn{
@@ -831,7 +896,6 @@ section#contact form#contactForm .form-group-textarea textarea {
     }
     .header_banner iframe{
         height: 365px;
-        top: 41px;
     }
     .wrapper h1.home-parallax{
         bottom: 7%;
@@ -842,14 +906,16 @@ section#contact form#contactForm .form-group-textarea textarea {
 }
 @media(max-width:824px){
     .content .header_banner{
-        width: 550px;
+        display: none;
     }
-    .header_banner iframe{
-        height: 260px;
-        top: 34px;
-    }
+    
 }
 @media(max-width:768px){
+
+    .banner_heading h1,
+    .banner_heading h2{
+      font-size: 45px;
+    }
     .wrapper h1.home-parallax{
         bottom: 15%;
     }
@@ -866,19 +932,13 @@ section#contact form#contactForm .form-group-textarea textarea {
     }
 }
 @media(max-width:530px){
-    .header_banner iframe{
-        height: 250px;
-        top: 32px;
-    }
+    
     .wrapper h1.home-parallax{
         bottom: 35%;
     }
 }
 @media(max-width:500px){
-    .header_banner iframe{
-        height: 240px;
-        top: 28px;
-    }
+   
 }
 @media(max-width:425px){
     #menuBtn h5{
@@ -905,9 +965,7 @@ section#contact form#contactForm .form-group-textarea textarea {
     .menu ul li a::after{
         height: 4px;
     }
-    .header_banner iframe{
-        display: none;
-    }
+     
     .wrapper h1.home-parallax{
         bottom: 35%;
     }
